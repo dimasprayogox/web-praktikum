@@ -12,7 +12,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Login - DimasGay</title>
+  <title>Login - Toko CumaEvos</title>
 
   <meta name="description" content="" />
 
@@ -49,11 +49,8 @@
             <!-- Logo -->
             <div class="app-brand justify-content-center">
               <a href="/" class="app-brand-link gap-2">
-                <span class="app-brand-logo demo">
-                  <!-- Logo Image -->
-                    <img src="{{ asset('assets/img/logo/83790f2b43f00be.png') }}" alt="Logo" width="50"/>
-                </span>
-                <span class="app-brand-text demo text-heading fw-bold">DimasGay</span>
+                
+                <span class="app-brand-text demo text-heading fw-bold">CumaEvos</span>
               </a>
             </div>
             <!-- /Logo -->

@@ -18,6 +18,9 @@ Route::get('/', function () {
     return redirect()->route('login');;
 });
 
+
+
+
 Route::middleware(['auth'])->group(function () {
     // Prefix untuk Admin
     Route::prefix('admin')->middleware('role:admin')->group(function () {
