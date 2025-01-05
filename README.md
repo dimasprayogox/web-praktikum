@@ -50,11 +50,13 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di li
 8. **Akses aplikasi:**
    Buka browser dan akses aplikasi di http://127.0.0.1:8000.
    
-## Login sebagai Admin: Anda dapat menggunakan data dummy untuk login sebagai Admin:
+## Login sebagai Admin: 
+**Anda dapat menggunakan data dummy untuk login sebagai Admin:**
 
 Email: admin@example.com
 Password: password
-## Login sebagai Karyawan: Anda dapat menggunakan data dummy untuk login sebagai Karyawan:
+## Login sebagai Karyawan: 
+**Anda dapat menggunakan data dummy untuk login sebagai Karyawan:**
 
 Email: karyawan@example.com
 Password: password
