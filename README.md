@@ -47,14 +47,17 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di li
    npm run dev
    php artisan serve
 
+
 8. **Akses aplikasi:**
    Buka browser dan akses aplikasi di http://127.0.0.1:8000.
+
    
 ## Login sebagai Admin: 
 **Anda dapat menggunakan data dummy untuk login sebagai Admin:**
 
 Email: admin@example.com
 Password: password
+
 ## Login sebagai Karyawan: 
 **Anda dapat menggunakan data dummy untuk login sebagai Karyawan:**
 
@@ -66,6 +69,7 @@ Autentikasi Pengguna: Sistem login untuk admin dan karyawan dengan menggunakan L
 Manajemen Pengguna (Admin): Admin dapat menambah, mengubah, menghapus, dan melihat daftar pengguna.
 Dashboard (Karyawan): Karyawan dapat mengakses halaman dashboard.
 Responsif dan Modern: Menggunakan Tailwind CSS untuk tampilan yang responsif dan desain modern.
+
 
 ## Struktur File Proyek
 **Berikut adalah penjelasan tentang struktur file proyek yang digunakan dalam aplikasi ini:**
