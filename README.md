@@ -50,6 +50,12 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di li
 8. **Akses aplikasi:**
    Buka browser dan akses aplikasi di http://127.0.0.1:8000.
 
+## Fitur Utama
+Autentikasi Pengguna: Sistem login untuk admin dan karyawan dengan menggunakan Laravel Breeze.
+Manajemen Pengguna (Admin): Admin dapat menambah, mengubah, menghapus, dan melihat daftar pengguna.
+Dashboard (Karyawan): Karyawan dapat mengakses halaman dashboard.
+Responsif dan Modern: Menggunakan Tailwind CSS untuk tampilan yang responsif dan desain modern.
+
 ## Struktur File Proyek
 **Berikut adalah penjelasan tentang struktur file proyek yang digunakan dalam aplikasi ini:**
 ```bash
@@ -79,9 +85,5 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di li
     ├── tailwind.config.js         # Konfigurasi untuk Tailwind CSS
     └── webpack.mix.js             # Konfigurasi build frontend (Laravel Mix)
     
-##Fitur Utama
-Autentikasi Pengguna: Sistem login untuk admin dan karyawan dengan menggunakan Laravel Breeze.
-Manajemen Pengguna (Admin): Admin dapat menambah, mengubah, menghapus, dan melihat daftar pengguna.
-Dashboard (Karyawan): Karyawan dapat mengakses halaman dashboard.
-Responsif dan Modern: Menggunakan Tailwind CSS untuk tampilan yang responsif dan desain modern.
+
     
