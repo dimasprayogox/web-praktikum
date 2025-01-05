@@ -1,107 +1,87 @@
-# Proyek Laravel dan Tailwind CSS
+# Web Administrasi dengan Sistem Autentikasi
 
 ## Deskripsi Proyek
-Proyek ini adalah aplikasi web yang dibangun menggunakan **Laravel**, sebuah framework PHP yang powerful untuk pengembangan aplikasi berbasis web, dan **Tailwind CSS**, sebuah framework CSS utility-first untuk mendesain antarmuka pengguna yang modern dan responsif.  
-Proyek ini dirancang untuk mempermudah pengembangan aplikasi dengan struktur yang rapi, performa tinggi, dan pengalaman pengguna yang optimal.
 
----
+Proyek ini adalah aplikasi web administrasi yang dilengkapi dengan sistem autentikasi untuk mengakses halaman web. Aplikasi ini memiliki dua role pengguna, yaitu **admin** dan **karyawan**. Setiap role memiliki hak akses yang berbeda:
+
+- **Admin**: Dapat mengakses halaman **manage users**, yang mencakup sistem CRUD untuk mengelola data pengguna.
+- **Karyawan**: Hanya dapat mengakses halaman **dashboard**.
+
+Proyek ini dibangun dengan menggunakan **Laravel Breeze** untuk autentikasi pengguna, **Livewire** untuk interaktivitas yang dinamis di sisi klien, dan **Tailwind CSS** untuk desain antarmuka yang responsif dan modern. Struktur proyek mengikuti pola **MVC (Model-View-Controller)** untuk memisahkan logika bisnis, tampilan, dan data.
 
 ## Cara Instalasi dan Penggunaan
 
-### Prasyarat
-Sebelum memulai instalasi, pastikan Anda telah menginstal:
-- **PHP** (minimal versi 8.1)
-- **Composer** (dependency manager untuk PHP)
-- **Node.js** dan **npm** (untuk pengelolaan paket front-end)
-- **MySQL** atau database lainnya yang didukung Laravel
+Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di lingkungan lokal Anda:
 
-### Langkah Instalasi
-1. **Clone Repository**
+1. **Kloning repositori:**
    ```bash
-   git clone <URL_REPOSITORY>
-   cd <NAMA_FOLDER>
-   ```
+   git clone https://github.com/dimasprayogox/web-praktikum.git
+   cd web-praktikum
 
-2. **Install Dependensi Backend**
+2. **Instalasi dependensi:**
+   Pastikan Anda memiliki Composer dan Node.js yang terinstal pada sistem Anda. Kemudian jalankan perintah berikut untuk        menginstal dependensi PHP dan frontend:**
    ```bash
    composer install
-   ```
-
-3. **Install Dependensi Frontend**
-   ```bash
    npm install
-   ```
 
-4. **Konfigurasi File `.env`**
-   - Duplikat file `.env.example` dan ubah nama menjadi `.env`.
-   - Konfigurasi detail database:
-     ```env
-     DB_CONNECTION=mysql
-     DB_HOST=127.0.0.1
-     DB_PORT=3306
-     DB_DATABASE=nama_database
-     DB_USERNAME=username
-     DB_PASSWORD=password
-     ```
+3. **Salin file .env.example menjadi .env:**
+   ```bash
+   cp .env.example .env
 
-5. **Generate App Key**
+4. **Konfigurasi database:**
+   Edit file .env dan atur pengaturan database sesuai dengan konfigurasi lingkungan Anda (seperti nama database, username,         password, dsb).
+
+5. **Generate kunci aplikasi:**
+   Jalankan perintah untuk menghasilkan kunci aplikasi Laravel:
    ```bash
    php artisan key:generate
-   ```
 
-6. **Migrasi Database**
-   Jalankan migrasi untuk membuat tabel-tabel yang dibutuhkan:
+6. **Migrasi dan seeding database:**
+   Jalankan migrasi untuk membuat tabel-tabel yang diperlukan oleh aplikasi:
    ```bash
    php artisan migrate
-   ```
 
-7. **Jalankan Build Assets**
-   Untuk mem-build CSS dan JavaScript menggunakan Tailwind:
+7. **Jalankan server lokal:**
+   Setelah semua langkah di atas selesai, Anda dapat menjalankan server lokal untuk mengakses aplikasi:
    ```bash
    npm run dev
-   ```
-   Untuk produksi:
-   ```bash
-   npm run build
-   ```
-
-8. **Menjalankan Server**
-   Jalankan aplikasi menggunakan built-in server Laravel:
-   ```bash
    php artisan serve
-   ```
-   Akses aplikasi di [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
----
+8. **Akses aplikasi:**
+   Buka browser dan akses aplikasi di http://127.0.0.1:8000.
 
 ## Struktur File Proyek
-Berikut adalah struktur file utama dalam proyek ini:
-
-```
-├── app/                 # Logika backend (Controllers, Models, dll.)
-├── bootstrap/           # File bootstrap aplikasi
-├── config/              # Konfigurasi aplikasi
-├── database/            # File migrasi dan seeder
-├── public/              # Entry point aplikasi dan file publik
-│   ├── css/             # File CSS (output dari Tailwind)
-│   ├── js/              # File JavaScript (output dari build)
-│   └── index.php        # Entry point utama
-├── resources/           # File view, komponen, dan aset sumber
-│   ├── views/           # Blade templates
-│   ├── css/             # File Tailwind (sumber)
-│   └── js/              # Script JavaScript (sumber)
-├── routes/              # File routing aplikasi
-│   ├── web.php          # Routing untuk aplikasi web
-│   └── api.php          # Routing untuk API
-├── storage/             # Cache, logs, dan file yang di-generate
-├── tests/               # File testing
-├── vendor/              # Dependensi dari Composer
-├── package.json         # Konfigurasi npm
-├── tailwind.config.js   # Konfigurasi Tailwind CSS
-├── webpack.mix.js       # Konfigurasi build asset (jika menggunakan Laravel Mix)
-└── .env                 # File konfigurasi lingkungan (environment)
-```
-
----
-
-Semoga README ini membantu dalam instalasi dan penggunaan proyek Anda! 🎉
+**Berikut adalah penjelasan tentang struktur file proyek yang digunakan dalam aplikasi ini:**
+```bash
+    ├── app/
+    │   ├── Http/
+    │   │   ├── Controllers/       # Kontroler aplikasi, menangani logika aplikasi
+    │   │   ├── Livewire/          # Komponen Livewire untuk interaktivitas
+    │   ├── Models/                # Model Eloquent untuk berinteraksi dengan database
+    ├── bootstrap/                 # File bootstrap untuk aplikasi Laravel
+    ├── config/                    # File konfigurasi untuk aplikasi
+    ├── database/                  # Folder untuk file migrasi dan seeders
+    │   ├── migrations/            # Migrasi untuk pembuatan tabel
+    │   ├── seeders/               # Seeder untuk pengisian data awal
+    ├── public/                    # Folder yang dapat diakses secara publik (assets, index.php)
+    │   ├── css/                   # File CSS (termasuk Tailwind CSS)
+    │   ├── js/                    # File JavaScript
+    ├── resources/                 # Tampilan dan sumber daya frontend
+    │   ├── views/                 # File Blade untuk tampilan halaman
+    │   ├── lang/                  # File terjemahan aplikasi
+    ├── routes/                    # File rute aplikasi (web.php, api.php)
+    ├── storage/                   # File sementara dan log
+    ├── tests/                     # Folder untuk file testing aplikasi
+    ├── .env                       # File konfigurasi lingkungan (database, kunci aplikasi)
+    ├── artisan                    # CLI Laravel untuk menjalankan perintah
+    ├── composer.json              # File dependensi PHP (Composer)
+    ├── package.json               # File dependensi frontend (npm)
+    ├── tailwind.config.js         # Konfigurasi untuk Tailwind CSS
+    └── webpack.mix.js             # Konfigurasi build frontend (Laravel Mix)
+    
+##Fitur Utama
+Autentikasi Pengguna: Sistem login untuk admin dan karyawan dengan menggunakan Laravel Breeze.
+Manajemen Pengguna (Admin): Admin dapat menambah, mengubah, menghapus, dan melihat daftar pengguna.
+Dashboard (Karyawan): Karyawan dapat mengakses halaman dashboard.
+Responsif dan Modern: Menggunakan Tailwind CSS untuk tampilan yang responsif dan desain modern.
+    
