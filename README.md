@@ -54,7 +54,7 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di li
 
 Email: admin@example.com
 Password: password
-Login sebagai Karyawan: Anda dapat menggunakan data dummy untuk login sebagai Karyawan:
+## Login sebagai Karyawan: Anda dapat menggunakan data dummy untuk login sebagai Karyawan:
 
 Email: karyawan@example.com
 Password: password
